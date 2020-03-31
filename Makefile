@@ -1,0 +1,74 @@
+CC=g++
+
+CFLAGS=-c 
+
+all: main
+
+main: MAIN.o ALGAE.o ANIMALS.o BEAR.o CARNIVORES.o DEER.o ECOSYSTEM.o FOX.o GHOG.o GRASS.o HERBIVORES.o MAPLE.o OAK.o PINE.o PLANTS.o RABBIT.o SALMON.o SEEDED.o SEEDLESS.o TILE.o WOLF.o 
+	$(CC) -o main MAIN.o ALGAE.o ANIMALS.o BEAR.o CARNIVORES.o DEER.o ECOSYSTEM.o FOX.o GHOG.o GRASS.o HERBIVORES.o MAPLE.o OAK.o PINE.o PLANTS.o RABBIT.o SALMON.o SEEDED.o SEEDLESS.o TILE.o WOLF.o
+
+MAIN.o: MAIN.cpp
+	$(CC) $(CFLAGS) MAIN.cpp
+
+ALGAE.o: ALGAE.cpp
+	$(CC) $(CFLAGS) ALGAE.cpp
+
+ANIMALS.o: ANIMALS.cpp
+	$(CC) $(CFLAGS) ANIMALS.cpp
+
+BEAR.o: BEAR.cpp 
+	$(CC) $(CFLAGS) BEAR.cpp
+
+CARNIVORES.o: CARNIVORES.cpp
+	$(CC) $(CFLAGS) CARNIVORES.cpp
+
+DEER.o: DEER.cpp
+	$(CC) $(CFLAGS) DEER.cpp
+
+ECOSYSTEM.o: ECOSYSTEM.cpp
+	$(CC) $(CFLAGS) ECOSYSTEM.cpp
+
+FOX.o: FOX.cpp
+	$(CC) $(CFLAGS) FOX.cpp
+
+GHOG.o: GHOG.cpp
+	$(CC) $(CFLAGS) GHOG.cpp
+
+GRASS.o: GRASS.cpp
+	$(CC) $(CFLAGS) GRASS.cpp
+
+HERBIVORES.o: HERBIVORES.cpp
+	$(CC) $(CFLAGS) HERBIVORES.cpp
+
+MAPLE.o: MAPLE.cpp
+	$(CC) $(CFLAGS) MAPLE.cpp
+
+OAK.o: OAK.cpp
+	$(CC) $(CFLAGS) OAK.cpp
+
+PINE.o: PINE.cpp
+	$(CC) $(CFLAGS) PINE.cpp
+
+PLANTS.o: PLANTS.cpp
+	$(CC) $(CFLAGS) PLANTS.cpp
+
+RABBIT.o: RABBIT.cpp
+	$(CC) $(CFLAGS) RABBIT.cpp
+
+SALMON.o: SALMON.cpp
+	$(CC) $(CFLAGS) SALMON.cpp
+
+SEEDED.o: SEEDED.cpp
+	$(CC) $(CFLAGS) SEEDED.cpp
+
+SEEDLESS.o: SEEDLESS.cpp
+	$(CC) $(CFLAGS) SEEDLESS.cpp
+
+TILE.o: TILE.cpp
+	$(CC) $(CFLAGS) TILE.cpp
+
+WOLF.o: WOLF.cpp
+	$(CC) $(CFLAGS) WOLF.cpp
+
+clean:
+	rm -rf *o main
